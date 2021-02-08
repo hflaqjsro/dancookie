@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>단쿠키 대학생활 테스트</title>
+    <meta name="description" content="단쿠키 대학생활 테스트 페이지입니다.">
+    <meta property="og:type" content="website"> 
+    <meta property="og:title" content="페이지 제목">
+    <meta property="og:description" content="페이지 설명">
+    <meta property="og:image" content="http://www.mysite.com/myimage.jpg">
+    <meta property="og:url" content="http://www.mysite.com">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+    <div class="start">
+        <header>
+            <article class="wrap">
+                <div class="start_title">
+                    <div class="top">
+                        <i class="fas fa-signal"></i>
+                        <i class="fas fa-wifi"></i>
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h1>단쿠키 대학생활 테스트</h1>
+                    <h2>당신의 대학생활은 과연??</h2>
+                </div>
+                <div class="start_img">
+                    <img src="./img/DAN01.png" alt="dan01">
+                </div>
+            </article>
+        </header>
+        <section>
+            <article class="wrap">
+                <div class="start_btn">
+                    <div>
+                        <button class="start_btn_01" type="button" onclick="location.href='http://www.naver.com'">공유하기</button>
+                    </div>
+                    <div>
+                        <button class="start_btn_02" type="button" onclick='start();'>시작하기 ></button>
+                    </div>
+                </div>
+                <div class="logo">
+                    <a href="#"><h3>DANKOOKIE</h3></a>
+                </div>
+                <div class="deco">
+                </div>
+            </article>
+        </section>
+    </div>
+    <div class="question">
+        <article class="wrap">
+            <div class="top">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+            </div>
+            <h2 id="title">문제</h2>
+            <input id="type" type="hidden" value="EI">
+            <div class="qu_btn">
+                <button id="A" type="button">1</button>
+            </div>
+            <div class="qu_btn">
+                <button id="B" type="button">2</button>
+            </div>
+        </article>
+    </div>
+    <div class="result">
+        <article class="wrap">
+            <div class="top">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+            <div class="result_main">
+                <h2 id="category">유형</h2>
+                <img id="img_01"  src="" alt="">
+                <h2 id="animal">동물이름</h2>
+            </div>
+            <div class="result_section">
+                <div class="result_explain">
+                    <img id="img_02"  src="" alt="">
+                    <h3 id="explain_01">설명은?</h3>
+                    <h4 id="explain_02">설명</h4>
+                </div>
+                <div class="result_sub">
+                    <div class="result_sub01">
+                        <h4 id="explain_03">잘맞는</h4>
+                        <img id="img_03"  src="" alt="">
+                    </div>
+                    </div>
+                <div class="result_sub">
+                    <div class="result_sub02">
+                        <h4 id="explain_04">안맞는</h4>
+                        <img id="img_04"  src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>    
+    <input type="hidden" id="EI" value="0">
+    <input type="hidden" id="SN" value="0">
+    <input type="hidden" id="TF" value="0">
+    <input type="hidden" id="JP" value="0">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script>
+        var num = 1;
+        var q = {
+            1: {"title": "Q. 동아리에 신입으로 들어가서 아는 사람이 아무도 없는 상황", "type": "EI", "A": "어색한건 못 참아 먼저 말 건다", "B": "존버가 답이야.. 말 걸어주길 기다린다."},
+            2: {"title": "Q. 드디어 과제 끝! 이제 뭐하지?", "type": "EI", "A": "바로 술마시러 간다", "B": "오늘은 하루종일 못 봤던 드라마 정주행이다."},
+            3: {"title": "Q. 소개팅을 나가서 이상형을 만난 당신", "type": "EI", "A": "주제를 던지면서 대화를 이끌어 나간다", "B": "말을 많이하기 보다는 상대방의 말을 들어준다"},
+            4: {"title": "Q. 소설을 끝까지 읽은 뒤 나는..", "type": "SN", "A": "아 다 읽었다", "B": "주인공이 어떻게 살아갔을지 상상해본다"},
+            5: {"title": "Q. 일을 할 때 나는", "type": "SN", "A": "매뉴얼이 있는 편을 선호한다", "B": "나만의 방식대로 매뉴얼을 만드는걸 선호한다"},
+            6: {"title": "문제 6번", "type": "SN", "A": "S", "B": "N"},
+            7: {"title": "문제7번", "type": "TF", "A": "나 : 괜찮아? 보험은 들어놨어??", "B": "나 : 괜찮아? 다친 곳은 없어?"},
+            8: {"title": "친구 : 나 오늘 기분이 안 좋아서 아까 옷 하나 샀어.", "type": "TF", "A": "? 무슨 옷 샀는데?", "B": "? 왜 기분이 안 좋았는데??"},
+            9: {"title": "친구가 전화하여 애인과 싸웠다고 한다.", "type": "TF", "A": "왜 뭐 때문에 싸웠는데?", "B": "에고 속상했겠다..."},
+            10: {"title": "여행계획을 세울때는?", "type": "JP", "A": "사전에 미리 조사하여 루트를 짜 놓은다.", "B": "계획도 좋지만 발길 닿는대로 그때그때 가고 싶은곳에 간다."},
+            11: {"title": "시험시간에 시험준비 방법은?", "type": "JP", "A": "한달 전 부터 계획을 정하여 공부할 분량을 정해놓고 한다.", "B": "하고싶은 과목을 그때그때 골라한다."},
+            12: {"title": "열심히 공부했는데 시험을 망친 아이에게", "type": "JP", "A": "다음에 더 좋은 점수를 받으면 된다고 위로한다.", "B": "열심히 했으니 괜찮다고 위로한다."}
+        }
+        var result = {
+            "INFP": {"animal": "단1", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "INFJ": {"animal": "단2", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "INTP": {"animal": "단3", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "INTJ": {"animal": "단4", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "ISFP": {"animal": "단5", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "ISFJ": {"animal": "단6", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "ISTP": {"animal": "단7", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "ISTJ": {"animal": "단8", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "ENFP": {"animal": "단9", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "ENFJ": {"animal": "단10", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "ENTP": {"animal": "단10", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "ENTJ": {"animal": "단11", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "ESFP": {"animal": "단12", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "ESFJ": {"animal": "단13", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "ESTP": {"animal": "단14", "category":"당신의 유형은?", "explain": "하마 설명", "img": "./img/DAN01.png"},
+            "ESTJ": {"animal": "욕망가득 고양이", "category":"당신의 유형은?", "explain_01": "성격은?", "img_01": "./img/DAN01.png", "img_02": "./img/bar_01.png", "explain_02":"설명설명", "img_03": "./img/DAN01.png", "explain_03":"잘맞는", "img_04": "./img/DAN01.png", "explain_04":"안맞는"}
+        }
+        function start() {
+            $(".start").hide();
+            $(".question").show();
+            next();
+         }
+         $("#A").click(function(){
+             var type = $("#type").val();
+             var preValue = $("#"+type).val();
+             $("#"+type).val(parseInt(preValue)+1);
+             next();
+         });
+         $("#B").click(function(){
+             next();
+         });
+        function next() {
+            if (num == 13){
+                $(".question").hide();
+                $(".result").show();
+                var mbti = "";
+                ($("#EI").val() < 2) ? mbti+="I" : mbti+="E";
+                ($("#SN").val() < 2) ? mbti+="N" : mbti+="S";
+                ($("#TF").val() < 2) ? mbti+="F" : mbti+="T";
+                ($("#JP").val() < 2) ? mbti+="P" : mbti+="J";
+                /*
+                if($("#EI").val() < 2){
+                    mbti = mbti + "I"
+                } else {
+                    mbti = mbti + "E"
+                } */
+                $("#img_01").attr("src",result[mbti]["img_01"]);
+                $("#category").html(result[mbti]["category"]);
+                $("#animal").html(result[mbti]["animal"]);
+                $("#explain_01").html(result[mbti]["explain_01"]);
+                $("#img_02").attr("src",result[mbti]["img_02"]);
+                $("#explain_02").html(result[mbti]["explain_02"]);
+                $("#img_03").attr("src",result[mbti]["img_03"]);
+                $("#explain_03").html(result[mbti]["explain_03"]);
+                $("#img_04").attr("src",result[mbti]["img_04"]);
+                $("#explain_04").html(result[mbti]["explain_04"]);
+                
+            } else {
+                $(".progress-bar").attr('style', 'width: calc(100/12*'+num+'%)');
+                $("#title").html(q[num]["title"]);
+                $("#type").val(q[num]["type"])
+                $("#A").html(q[num]["A"]);
+                $("#B").html(q[num]["B"]);
+                num++;
+            }
+        }
+    </script>
+</body>
+</html>
