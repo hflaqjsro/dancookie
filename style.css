@@ -21,6 +21,7 @@
 .wrap {
     max-width: 450px;
     margin: 0 auto;
+    padding: 20px;
     position: relative;
 }
 a {
@@ -132,9 +133,6 @@ section .wrap .logo h3 {
 .question {
     height: 958px;
     background: #FAF8F2;
-}
-.question .wrap {
-    padding: 30px;
 }
 .question .wrap .top {
     margin: auto;
