@@ -133,6 +133,15 @@ section .wrap .logo h3 {
     height: 958px;
     background: #FAF8F2;
 }
+.question .wrap .mid{
+    
+}
+@media (max-width: 767px){
+    .question .wrap .mid{
+        padding: 30px;
+    }   
+    
+}
 .question .wrap .top {
     margin: auto;
     padding: 30px 0px;
