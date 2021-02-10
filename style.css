@@ -225,7 +225,7 @@ section .wrap .logo h3 {
 .result .result_main #img_01 {
     width: 280px;
     height: 280px;
-    padding: 20px;
+    padding: 30px;
 }
 
 .result .result_main #animal {
@@ -239,14 +239,13 @@ section .wrap .logo h3 {
 
 .result .result_section {
     margin: auto;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
+    border-radius: 25px;
     background: #FAF8F2;    
     overflow: hidden;
 }
 
 .result .result_section .result_explain {
-    padding-top: 400px;
+    padding-top: 300px;
     text-align: center;
     margin: auto;
     width: 350px;
