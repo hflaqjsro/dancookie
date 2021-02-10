@@ -209,8 +209,9 @@ section .wrap .logo h3 {
 
 .result .wrap .result_main {
     position: absolute;
-    left: 55px;
     top: 120px;
+    left: 50px;
+    right: 50px;
     margin: auto;
     text-align: center;
     background: #fff;
