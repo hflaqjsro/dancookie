@@ -130,6 +130,7 @@ section .wrap .logo h3 {
 .question {
     display: none;
     background: #FAF8F2;
+    height: 1000px;
 }
 
 .question .wrap .top {
