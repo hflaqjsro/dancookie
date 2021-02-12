@@ -242,15 +242,6 @@ section .wrap .logo h3 {
     border-radius: 20px;
     box-shadow: 5px 5px 4px #9999;
 }
-.result .wrap .result_main .re_btn {
-    display: inline-block;
-}
-.result .wrap .result_main .re_btn button {
-    border: 0px;
-    padding: 10px 25px;
-    border-radius: 15px;
-    margin: 20px;
-}
 .result .result_main #category {
     margin-top: 20px;
     font-size: 20px;
@@ -269,7 +260,17 @@ section .wrap .logo h3 {
     color: #999999;
     font-weight: bolder;
 }
-
+.result .wrap .result_main .re_btn {
+    display: inline-block;
+}
+.result .wrap .result_main .re_btn button {
+    border: 0px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    margin: 20px;
+    position: relative;
+    z-index: 10;
+}
 
 
 .result .result_section {
@@ -280,10 +281,11 @@ section .wrap .logo h3 {
 }
 
 .result .result_section .result_explain {
-    padding-top: 300px;
+    padding-top: 400px;
     text-align: center;
     margin: auto;
     width: 350px;
+    position: relative;
 }
 .result .result_section #img_02 {
     width: 300px;
@@ -294,15 +296,19 @@ section .wrap .logo h3 {
     text-align: left;
     font-size: 22px;
     color: #999999;
-   font-family: "NotoSansCJKkr-Medium";
+    font-family: "NotoSansCJKkr-Medium";
 }
-.result .result_section .result_explain #explain_02 {
+.result .result_section .result_explain h4 {
+    padding-left: 15px;
     text-align: left;
     font-size: 15px;
     color: #999999;
     font-family: "NotoSansCJKkr-Light";
+    line-height: 20px;
 }
-
+.result .result_section .result_explain h4::before {
+    content: "-"; position: absolute; left: 5px;
+}
 .result .result_section .result_sub {
     width: 50%;
     padding: 20px;
@@ -345,7 +351,7 @@ section .wrap .logo h3 {
 
 .result02 {
     display: none;
-    background: #000;
+    background: #f00;
     position: relative;
 }
 /* .result .logo {
@@ -385,6 +391,8 @@ section .wrap .logo h3 {
     padding: 10px 25px;
     border-radius: 15px;
     margin: 20px;
+    position: relative;
+    z-index: 11;
 }
 .result02 .result_main #category02 {
     margin-top: 20px;
@@ -415,7 +423,7 @@ section .wrap .logo h3 {
 }
 
 .result02 .result_section .result_explain {
-    padding-top: 300px;
+    padding-top: 400px;
     text-align: center;
     margin: auto;
     width: 350px;
@@ -431,7 +439,7 @@ section .wrap .logo h3 {
     color: #999999;
    font-family: "NotoSansCJKkr-Medium";
 }
-.result02 .result_section .result_explain #explain02_02 {
+.result02 .result_section .result_explain h4 {
     text-align: left;
     font-size: 15px;
     color: #999999;
