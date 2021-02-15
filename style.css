@@ -51,6 +51,9 @@ header .wrap .start_img{
 header .wrap img {
     display: block;
     margin: auto;
+    width: 100%;
+    height: 100%;
+    padding: 0px 80px;
 }
 header .wrap .start_title .top {
     margin: auto;
@@ -63,7 +66,7 @@ header .wrap .start_title .top i {
 
 .start_title h1 {
     text-align: center;
-    font-size: 33px;
+    font-size: 30px;
     font-weight: 700;
 }
 .start_title h2 {
@@ -173,9 +176,9 @@ section .wrap .logo h3 {
     border-radius: 10px;
     background: #fff;
     box-shadow: 1px 4px 10px 1px #d1d1d1;
-    font-size: 20px;
+    font-size: 18px;
     color: #999999;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 @media (max-width: 767px){
@@ -205,7 +208,7 @@ section .wrap .logo h3 {
         box-shadow: 1px 4px 10px 1px #d1d1d1;
         font-size: 18px;
         color: #999999;
-}
+    }
 }
 
 
@@ -252,9 +255,9 @@ section .wrap .logo h3 {
     font-weight: 700;
 }
 .result .result_main #img_01 {
-    width: 280px;
-    height: 280px;
-    padding: 30px;
+    width: 100%;
+    height: 100%;
+    padding: 0px 60px;
 }
 
 .result .result_main #animal {
@@ -282,16 +285,26 @@ section .wrap .logo h3 {
     background: #FAF8F2;    
     overflow: hidden;
 }
+.result .result_section .est {
+    margin: auto;
+}
+
+.result .result_section .est #est_img {
+    width: 100%;
+    height: 100%;
+    padding: 0px 60px;
+    margin: 0px auto 30px auto;
+}
 
 .result .result_section .result_explain {
-    padding-top: 400px;
     text-align: center;
     margin: auto;
     position: relative;
 }
 .result .result_section #img_02 {
-    width: 300px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
 }
 
 .result .result_section .result_explain #explain_01 {
@@ -332,7 +345,7 @@ section .wrap .logo h3 {
     }
     .result .result_section .result_explain h4::before {
     content: "-"; position: absolute; left: 13px;
-}
+    }
 }
 
 .result .result_section .result_sub {
@@ -427,9 +440,9 @@ section .wrap .logo h3 {
     font-weight: 700;
 }
 .result02 .result_main #img02_01 {
-    width: 280px;
-    height: 280px;
-    padding: 30px;
+    width: 100%;
+    height: 100%;
+    padding: 0px 50px;
 }
 
 .result02 .result_main #animal02 {
@@ -452,22 +465,23 @@ section .wrap .logo h3 {
     padding-top: 400px;
     text-align: center;
     margin: auto;
-    width: 350px;
     position: relative;
 }
 .result02 .result_section #img02_02 {
-    width: 300px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
 }
 
 .result02 .result_section .result_explain #explain02_01 {
+    padding: 0px 20px;
     text-align: left;
     font-size: 22px;
     color: #999999;
     font-weight: 500;
 }
 .result02 .result_section .result_explain h4 {
-    padding-left: 15px;
+    padding: 0px 35px;
     text-align: left;
     font-size: 15px;
     color: #999999;
@@ -475,7 +489,28 @@ section .wrap .logo h3 {
     line-height: 25px;
 }
 .result02 .result_section .result_explain h4::before {
-    content: "-"; position: absolute; left: 5px;
+    content: "-"; position: absolute; left: 25px;
+}
+@media (max-width:767px){
+    .result02 .result_section .result_explain #explain_01 {
+        text-align: left;
+        font-size: 22px;
+        color: #999999;
+        font-weight: 500;
+        padding-left: 15px;
+        padding-right: 30px;
+    }
+    .result02 .result_section .result_explain h4 {
+        padding: 0px 25px;
+        text-align: left;
+        font-size: 15px;
+        color: #999999;
+        font-weight: 300;
+        line-height: 25px;
+    }
+    .result02 .result_section .result_explain h4::before {
+    content: "-"; position: absolute; left: 13px;
+    }
 }
 
 .result02 .result_section .result_sub {
