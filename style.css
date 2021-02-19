@@ -261,7 +261,6 @@ a:hover {
 }
 
 .result_main #animal02 {
-    margin: 20px;
     font-size: 20px;
     color: #999999;
     font-weight: 700;
@@ -395,11 +394,10 @@ a:hover {
 .result .wrap .result_main #img_01 {
     width: 100%;
     height: 100%;
-    padding: 0px 60px;
+    padding: 0px 30px;
 }
 
 .result .wrap .result_main #animal {
-    margin: 20px;
     font-size: 20px;
     color: #999999;
     font-weight: 700;
