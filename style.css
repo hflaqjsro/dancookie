@@ -10,7 +10,7 @@
 .wrap {
     max-width: 450px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px opx;
     position: relative;
 }
 a {
@@ -35,7 +35,9 @@ a:hover {
 }
 
 
-
+.top i {
+    display: none;
+}
 
 
 
@@ -48,7 +50,7 @@ a:hover {
 
 .start header .wrap .start_title .top {
     margin: auto;
-    padding: 15px 0px;
+    padding: 30px 0px;
     text-align: right;
 }
 .start header .wrap .start_title .top i {
@@ -130,7 +132,7 @@ a:hover {
 
 .question .wrap .top {
     margin: auto;
-    padding: 15px 0px;
+    padding: 30px 0px;
     text-align: right;
 }
 .question .wrap .top i {
@@ -223,7 +225,7 @@ a:hover {
 /* 베이스 - 매운맛 */
 .result02 {
     display: none;
-    background: #f00;
+    background: #e36356;
     position: relative;
 }
 .wrap .top {
@@ -351,13 +353,13 @@ a:hover {
 }
 .wrap .result_section .result_sub h4 {
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     padding-top: 20px;
 }
 .wrap .result_section .result_sub img {
     width: 100%;
-    height: 130px;
-    padding: 20px;
+    height: 100%;
+    padding: 10px 20px;
 }
 .wrap .result_section .result_sub01 {
     background: #fff;
